@@ -13,8 +13,11 @@ function Timer(){
     }
     function startTimer(){
         setInterval(() => {
-            setTime(setTimeValue)
+            setTime(prev => prev - 1)
             }, 1000);
+        }
+        if (time === 0){
+            setTime(0)
         }
     return (
         <>
