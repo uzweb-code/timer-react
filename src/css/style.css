@@ -11,7 +11,7 @@ body{
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 100px;
 }
 .timer-div{
     text-align: center;
@@ -28,11 +28,15 @@ button{
     border-radius: 2px;
     border: 1px;
 }
+.submit{
+    margin: 5px;
+}
 button:active{
     transform: scale(1.2);
 }
 .start{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
+

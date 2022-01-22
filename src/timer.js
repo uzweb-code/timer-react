@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from  './images/timer.png';
 import './css/style.css';
 
@@ -13,11 +13,8 @@ function Timer(){
     }
     function startTimer(){
         setInterval(() => {
-            setTime(prev => prev - 1)
+            setTime((prev) => prev !== 0 ? prev - 1: prev = 0)
             }, 1000);
-        }
-        if (time === 0){
-            setTime(0)
         }
     return (
         <>
@@ -25,12 +22,12 @@ function Timer(){
                      <h1>Timer dasturi</h1>
                     <img src={logo} />
                      <h1>Vaqt: {time}s</h1>
-                     <input type="text" id="input" onChange={timeValue} placeholder="Enter time" />
-                     <button className="submit" onClick={editTime}>Submit</button>
+                     <input type="text" id="input" onChange={timeValue} placeholder="Vaqtni kiriting" />
+                     <button className="submit" onClick={editTime} >Kiritish</button>
             </div>
             <div className="start">
                 <button onClick={startTimer}>
-                    Start
+                    Boshlash
                 </button>
             </div>
             </>
